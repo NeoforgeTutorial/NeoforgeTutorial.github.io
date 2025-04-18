@@ -19,18 +19,18 @@ customize:
         gravatar: #zth_9451@qq.com # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
         author: Taigou
         author_title: #Designer & Programmer
-        location: #Chengdu, China
+        location: Beijing, China
         follow: https://github.com/Taigou-1/
-    highlight: monokai
+    highlight: #monokai
     sidebar: left # sidebar position, options: left, right
-    category_perExpand: true # enable article categories list per expanding
+    category_perExpand: false # enable article categories list per expanding
     thumbnail: true # enable posts thumbnail, options: true, false
     favicon: /favicon.ico # path to favicon
-    default_index_file: 1.开始制作模组&环境配置.md # if this, it will display at site index instead of default index page
+    default_index_file: Neoforge教学-首页.md # if this, it will display at site index instead of default index page
     social_links:
-        github: https://github.com/zthxxx/zthxxx.github.io
-        stack-overflow: http://stackoverflow.com/users/7277090/zthxxx?tab=profile
-        codepen: http://codepen.io/zthxxx/
+        github: https://Taigou-1.github.io/
+        #stack-overflow: http://stackoverflow.com/users/7277090/zthxxx?tab=profile
+        #codepen: http://codepen.io/zthxxx/
         rss: /atom.xml
     social_link_tooltip: true # enable the social link tooltip, options: true, false
 
@@ -60,8 +60,8 @@ search:
 history_control: # make you wiki has history version control in page
     enable: true
     server_link: https://github.com # recommend use GitHub https://github.com
-    user: NeoforgeTutorial
-    repertory: NeoforgeTutorial.github.io
+    user: zthxxx
+    repertory: Wiki-site
     branch: writing
 
 # Comment

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Neoforge模组开发</title>
+  <title>Neoforgeģ���ѧ</title>
   
   
-  <link href="https://neoforgetutorial.netlify.app/atom.xml" rel="self"/>
+  <link href="http://neoforgetutorial.com/atom.xml" rel="self"/>
   
-  <link href="https://neoforgetutorial.netlify.app/"/>
-  <updated>2025-04-12T03:57:22.351Z</updated>
-  <id>https://neoforgetutorial.netlify.app/</id>
+  <link href="http://neoforgetutorial.com/"/>
+  <updated>2025-04-18T12:35:07.038Z</updated>
+  <id>http://neoforgetutorial.com/</id>
   
   <author>
     <name>Taigou</name>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>2.创建第一个方块</title>
-    <link href="https://neoforgetutorial.netlify.app/wiki/2.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%B9%E5%9D%97.html"/>
-    <id>https://neoforgetutorial.netlify.app/wiki/2.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%B9%E5%9D%97.html</id>
-    <published>2025-04-12T03:38:00.000Z</published>
-    <updated>2025-04-12T03:57:22.351Z</updated>
+    <link href="http://neoforgetutorial.com/wiki/2.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%B9%E5%9D%97.html"/>
+    <id>http://neoforgetutorial.com/wiki/2.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%B9%E5%9D%97.html</id>
+    <published>2025-04-18T12:04:26.000Z</published>
+    <updated>2025-04-18T12:35:07.038Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="2-创建第一个方块"><a href="#2-创建第一个方块" class="headerlink" title="2.创建第一个方块"></a>2.创建第一个方块</h1><h2 id="2-1分包"><a href="#2-1分包" class="headerlink" title="2.1分包"></a>2.1分包</h2><h3 id="Tip"><a href="#Tip" class="headerlink" title="Tip:"></a><code>Tip:</code></h3><p><code>建议把模组分成多个部分，以提升模组的可读性。你可以按照功能或按照逻辑将模组分为多个包。</code></p><p><code>按照功能：例如将方块放在block包中，将物品放在item包中，将实体放在entity包中。</code></p><p><code>按照逻辑：通过游戏内容的分类进行分类。例如，你想搞一个新的工作台，你可以将和它有关的方块、物品、菜单等内容归为一类。</code></p><h3 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h3><p>新建一个包（在上一篇文章中打开的类.java相同的目录下新建一个文件夹），然后新建一个类。</p><p>例如：com.Taigou.industrial_technology –&gt;block –&gt;Macerator,java</p><p>在主类中导包</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ...</span><br></pre></td></tr></table></figure><p>例如：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.Taigou.industrial_technology.block.Macerator;</span><br></pre></td></tr></table></figure><h2 id="2-2-注册方块"><a href="#2-2-注册方块" class="headerlink" title="2.2 注册方块"></a>2.2 注册方块</h2><p>创建注册器(DeferredRegister.Blocks)</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredRegister.<span class="type">Blocks</span> <span class="variable">BLOCKS</span> <span class="operator">=</span> DeferredRegister.createBlocks(<span class="string">&quot;yourmodid&quot;</span>);</span><br></pre></td></tr></table></figure><p>可以直接注册方块</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredBlock&lt;Block&gt; MY_BETTER_BLOCK = BLOCKS.register(</span><br><span class="line">    <span class="string">&quot;my_block&quot;</span>, </span><br><span class="line">    registryName -&gt; <span class="keyword">new</span> <span class="title class_">Block</span>(BlockBehaviour.Properties.of()</span><br><span class="line">        .setId(ResourceKey.create(Registries.BLOCK, registryName))</span><br><span class="line">        .destroyTime(<span class="number">2.0f</span>)</span><br><span class="line">        .explosionResistance(<span class="number">10.0f</span>)</span><br><span class="line">        .lightLevel(state -&gt; <span class="number">0</span>)</span><br><span class="line">    ));</span><br></pre></td></tr></table></figure><p>my_block为你的方块名</p><p>setID：每个方块注册必须有它</p><p>destroyTime：挖掘时间，石头的破坏时间为1.5，泥土为0.5，黑曜石为50，基岩为-1（无法挖掘）。</p><p>explosionResistance：爆炸抗性，石头的抗爆性为6.0，泥土为0.5，黑曜石为1200，基岩为360万。</p><p>lightLevel：发光亮度，在[0,15]区间内。</p><p>（这是几个比较常用的属性，还有其他属性，此处不再一一列举）</p><p>在主类中使用注册器：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> 主类类名(IEventBus modEventBus, ModContainer modContainer)</span><br><span class="line">&#123;</span><br><span class="line">    注册类名.BLOCKS.register(modEventBus);<span class="comment">//使用方块注册器</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注册类名填你注册方块的类名。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="2-创建第一个方块"><a href="#2-创建第一个方块" class="headerlink" title="2.创建第一个方块"></a>2.创建第一个方块</h1><h2 id="2-1分包"><a href="#2-1分包" class="headerlink" title="2.1分包"></a>2.1分包</h2><h3 id="Tip"><a href="#Tip" class="headerlink" title="Tip:"></a><code>Tip:</code></h3><p><code>建议把模组分成多个部分，以提升模组的可读性。你可以按照功能或按照逻辑将模组分为多个包。</code></p><p><code>按照功能：例如将方块放在block包中，将物品放在item包中，将实体放在entity包中。</code></p><p><code>按照逻辑：通过游戏内容的分类进行分类。例如，你想搞一个新的工作台，你可以将和它有关的方块、物品、菜单等内容归为一类。</code></p><h3 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h3><p>新建一个包（在上一篇文章中打开的类.java相同的目录下新建一个文件夹），然后新建一个类。</p><p>例如：com.Taigou.industrial_technology –&gt;block –&gt;Macerator,java</p><p>在主类中导包</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ...</span><br></pre></td></tr></table></figure><p>例如：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.Taigou.industrial_technology.block.Macerator;</span><br></pre></td></tr></table></figure><h2 id="2-2-注册方块-基础"><a href="#2-2-注册方块-基础" class="headerlink" title="2.2 注册方块(基础)"></a>2.2 注册方块(基础)</h2><p>创建注册器(DeferredRegister.Blocks)</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredRegister.<span class="type">Blocks</span> <span class="variable">BLOCKS</span> <span class="operator">=</span> DeferredRegister.createBlocks(<span class="string">&quot;yourmodid&quot;</span>);</span><br></pre></td></tr></table></figure><p>可以直接注册方块</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> DeferredBlock&lt;Block&gt; MY_BETTER_BLOCK = BLOCKS.register(</span><br><span class="line">    <span class="string">&quot;my_block&quot;</span>, </span><br><span class="line">    registryName -&gt; <span class="keyword">new</span> <span class="title class_">Block</span>(BlockBehaviour.Properties.of()</span><br><span class="line">        .setId(ResourceKey.create(Registries.BLOCK, registryName))</span><br><span class="line">        .destroyTime(<span class="number">2.0f</span>)</span><br><span class="line">        .explosionResistance(<span class="number">10.0f</span>)</span><br><span class="line">        .lightLevel(state -&gt; <span class="number">0</span>)</span><br><span class="line">    ));</span><br></pre></td></tr></table></figure><p>my_block为你的方块名</p><p>setID：每个方块注册必须有它</p><p>destroyTime：挖掘时间，石头的破坏时间为1.5，泥土为0.5，黑曜石为50，基岩为-1（无法挖掘）。</p><p>explosionResistance：爆炸抗性，石头的抗爆性为6.0，泥土为0.5，黑曜石为1200，基岩为360万。</p><p>lightLevel：发光亮度，在[0,15]区间内。</p><p>（这是几个比较常用的属性，还有其他属性，此处不再一一列举）</p><p>在主类中使用注册器：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> 主类类名(IEventBus modEventBus, ModContainer modContainer)</span><br><span class="line">&#123;</span><br><span class="line">    注册类名.BLOCKS.register(modEventBus);<span class="comment">//使用方块注册器</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注册类名填你注册方块的类名。</p><h2 id="2-3为方块添加材质"><a href="#2-3为方块添加材质" class="headerlink" title="2.3为方块添加材质"></a>2.3为方块添加材质</h2><p>为了给方块添加材质，你需要提供Models(模型)和Blockstate Files(方块状态文件)。</p><h3 id="Models-模型"><a href="#Models-模型" class="headerlink" title="Models(模型)"></a>Models(模型)</h3><p>在resources文件夹中，创建assets\你的模组ID\models\block\方块名.json文件，</p>]]></content>
     
     
       
@@ -33,29 +33,51 @@
     
     
     
-    <category term="Neoforge模组" scheme="https://neoforgetutorial.netlify.app/categories/Neoforge%E6%A8%A1%E7%BB%84/"/>
+    <category term="目录" scheme="http://neoforgetutorial.com/categories/%E7%9B%AE%E5%BD%95/"/>
     
     
   </entry>
   
   <entry>
     <title>1.开始制作模组&amp;环境配置</title>
-    <link href="https://neoforgetutorial.netlify.app/wiki/1.%E5%BC%80%E5%A7%8B%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%BB%84&amp;%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html"/>
-    <id>https://neoforgetutorial.netlify.app/wiki/1.%E5%BC%80%E5%A7%8B%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%BB%84&amp;%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html</id>
-    <published>2025-04-12T03:36:04.000Z</published>
-    <updated>2025-04-12T03:57:07.981Z</updated>
+    <link href="http://neoforgetutorial.com/wiki/1.%E5%BC%80%E5%A7%8B%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%BB%84&amp;%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html"/>
+    <id>http://neoforgetutorial.com/wiki/1.%E5%BC%80%E5%A7%8B%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%BB%84&amp;%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html</id>
+    <published>2025-04-18T12:04:25.000Z</published>
+    <updated>2025-04-18T12:06:38.560Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="1-开始制作模组-环境配置"><a href="#1-开始制作模组-环境配置" class="headerlink" title="1.开始制作模组&amp;环境配置"></a>1.开始制作模组&amp;环境配置</h1><p>建议熟悉Java编程语言（花几个小时在网上学习了解一下也可以）</p><h2 id="下载JDK和IntelliJ-IDEA"><a href="#下载JDK和IntelliJ-IDEA" class="headerlink" title="下载JDK和IntelliJ IDEA"></a>下载JDK和IntelliJ IDEA</h2><p>下载<a href="https://learn.microsoft.com/en-us/java/openjdk/download#openjdk-21">JDK21</a>，按正常步骤安装就可以了。</p><p><img src="/assets/1.png"></p><p>下载<a href="https://www.jetbrains.com/idea/download/?section=windows">IntelliJ IDEA</a>，建议下载图中的社区版，因为它免费，如果你想选专业版也可以。</p><p><img src="/assets/2.png"></p><h2 id="下载MDK"><a href="#下载MDK" class="headerlink" title="下载MDK"></a>下载MDK</h2><p>点击<a href="https://github.com/NeoForgeMDKs/MDK-1.21.4-ModDevGradle">链接</a>，将仓库克隆到本地。</p><p>若链接打不开或下载速度极慢，<a href="https://github.com/Taigou-1/Blogs-Tech-Tips-Articles/blob/main/Github%E7%BB%8F%E5%B8%B8%E6%89%93%E4%B8%8D%E5%BC%80%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%8C%E6%95%99%E4%BD%A0%E6%B5%81%E7%95%85%E8%AE%BF%E9%97%AEGithub.md">这篇文章</a>提供一个较好的解决方案。或者，网上还有很多类似的视屏或文章，也可以帮到你。</p><p><img src="/assets/3.png"></p><p>点击【Code】，【Download Zip】，仓库会下载到本地。然后将压缩包解压缩。</p><h2 id="用IDEA打开文件"><a href="#用IDEA打开文件" class="headerlink" title="用IDEA打开文件"></a>用IDEA打开文件</h2><p>用IDEA打开【MDK-1.21.4-ModDevGradle-main】文件，等待构建完成，可能需要一段时间。点击图中标出的【构建按钮】，可以看到构建任务的状态，如果构建出错，可以按照这一栏中IDEA给出的方法解决。</p><p><img src="/assets/4.png"></p><p>点击右侧在图中标出的按钮，双击【runClient】，IDEA会启动Minecraft，用于测试模组。选择【Language】，然后点击继续（continue），点击【模组列表】，可以看到【Example Mod】是我们现在正在制作的模组。</p><p><img src="/assets/5.png"></p><h2 id="修改Mod信息"><a href="#修改Mod信息" class="headerlink" title="修改Mod信息"></a>修改Mod信息</h2><p>双击左侧【gradle.properties】文件，修改信息：</p><p>mod_id：模组ID（MOD ID），用于区分你的模组和其他模组，两个模组如果有相同的Mod ID，模组将不能正常加载。模组ID还将作为资源和数据包的命名空间（例如模组中所有的物品ID开头都含有模组ID，用来与其他模组的同名物品区分）。只能包含小写字母、数字和下划线。</p><p>mod_name：模组的名字</p><p>mod_version：模组版本</p><p>mod_group_id：你的组ID，两个具有相同组ID的模组同时加载时只有一个能用，文件中给出的示例为com.example.examplemod，【example】部分随意命名，【examplemod】部分改为你的模组ID。例如我的MOD ID为industrial_technology，组ID为com.Taigou.industrial_technology。</p><p>mod_description：模组介绍，会在模组列表中显示</p><p><img src="/assets/6.png"></p><h2 id="调整包结构"><a href="#调整包结构" class="headerlink" title="调整包结构"></a>调整包结构</h2><p>打开scr\main\java\com\example\examplemod\ExampleMod.java文件</p><p><img src="/assets/7.png"></p><p>将第一行package后面的“com.example.examplemod”改为你的组ID，下方会出现红色小按钮，点它，然后点击【移至软件包…】。同时，Config.java文件同样需要像这样修改第一行内容。</p><p>将ModID修改为你的模组ID。</p><p>可选：修改类名，注意需要在IDEA显示报错的位置（即相关联的位置）按照提示进行修改。</p><p>可选：删去物品注册示例代码（第52——68行），其他多余的代码可暂时保留，以供需要时参考。</p><p>点击【同步Gradle项目】（如下图），重新构建</p><p><img src="/assets/8.png"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="开始制作模组-环境配置"><a href="#开始制作模组-环境配置" class="headerlink" title="开始制作模组&amp;环境配置"></a>开始制作模组&amp;环境配置</h1><p>建议熟悉Java编程语言（花几个小时在网上学习了解一下也可以）</p><h2 id="下载JDK和IntelliJ-IDEA"><a href="#下载JDK和IntelliJ-IDEA" class="headerlink" title="下载JDK和IntelliJ IDEA"></a>下载JDK和IntelliJ IDEA</h2><p>下载<a href="https://learn.microsoft.com/en-us/java/openjdk/download#openjdk-21">JDK21</a>，按正常步骤安装就可以了。</p><p><img src="/assets/1.png"></p><p>下载<a href="https://www.jetbrains.com/idea/download/?section=windows">IntelliJ IDEA</a>，建议下载图中的社区版，因为它免费，如果你想选专业版也可以。</p><p><img src="/assets/2.png"></p><h2 id="下载MDK"><a href="#下载MDK" class="headerlink" title="下载MDK"></a>下载MDK</h2><p>点击<a href="https://github.com/NeoForgeMDKs/MDK-1.21.4-ModDevGradle">链接</a>，将仓库克隆到本地。</p><p>若链接打不开或下载速度极慢，<a href="https://github.com/Taigou-1/Blogs-Tech-Tips-Articles/blob/main/Github%E7%BB%8F%E5%B8%B8%E6%89%93%E4%B8%8D%E5%BC%80%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%8C%E6%95%99%E4%BD%A0%E6%B5%81%E7%95%85%E8%AE%BF%E9%97%AEGithub.md">这篇文章</a>提供一个较好的解决方案。或者，网上还有很多类似的视屏或文章，也可以帮到你。</p><p><img src="/assets/3.png"></p><p>点击【Code】，【Download Zip】，仓库会下载到本地。然后将压缩包解压缩。</p><h2 id="用IDEA打开文件"><a href="#用IDEA打开文件" class="headerlink" title="用IDEA打开文件"></a>用IDEA打开文件</h2><p>用IDEA打开【MDK-1.21.4-ModDevGradle-main】文件，等待构建完成，可能需要一段时间。点击图中标出的【构建按钮】，可以看到构建任务的状态，如果构建出错，可以按照这一栏中IDEA给出的方法解决。</p><p><img src="/assets/4.png"></p><p>点击右侧在图中标出的按钮，双击【runClient】，IDEA会启动Minecraft，用于测试模组。选择【Language】，然后点击继续（continue），点击【模组列表】，可以看到【Example Mod】是我们现在正在制作的模组。</p><p><img src="/assets/5.png"></p><h2 id="修改Mod信息"><a href="#修改Mod信息" class="headerlink" title="修改Mod信息"></a>修改Mod信息</h2><p>双击左侧【gradle.properties】文件，修改信息：</p><p>mod_id：模组ID（MOD ID），用于区分你的模组和其他模组，两个模组如果有相同的Mod ID，模组将不能正常加载。模组ID还将作为资源和数据包的命名空间（例如模组中所有的物品ID开头都含有模组ID，用来与其他模组的同名物品区分）。只能包含小写字母、数字和下划线。</p><p>mod_name：模组的名字</p><p>mod_version：模组版本</p><p>mod_group_id：你的组ID，两个具有相同组ID的模组同时加载时只有一个能用，文件中给出的示例为com.example.examplemod，【example】部分随意命名，【examplemod】部分改为你的模组ID。例如我的MOD ID为industrial_technology，组ID为com.Taigou.industrial_technology。</p><p>mod_description：模组介绍，会在模组列表中显示</p><p><img src="/assets/6.png"></p><h2 id="调整包结构"><a href="#调整包结构" class="headerlink" title="调整包结构"></a>调整包结构</h2><p>打开scr\main\java\com\example\examplemod\ExampleMod.java文件</p><p><img src="/assets/7.png"></p><p>将第一行package后面的“com.example.examplemod”改为你的组ID，下方会出现红色小按钮，点它，然后点击【移至软件包…】。同时，Config.java文件同样需要像这样修改第一行内容。</p><p>将ModID修改为你的模组ID。</p><p>可选：修改类名，注意需要在IDEA显示报错的位置（即相关联的位置）按照提示进行修改。</p><p>可选：删去物品注册示例代码（第52——68行），其他多余的代码可暂时保留，以供需要时参考。</p><p>点击【同步Gradle项目】（如下图），重新构建</p><p><img src="/assets/8.png"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;1-开始制作模组-环境配置&quot;&gt;&lt;a href=&quot;#1-开始制作模组-环境配置&quot; class=&quot;headerlink&quot; title=&quot;1.开始制作模组&amp;amp;环境配置&quot;&gt;&lt;/a&gt;1.开始制作模组&amp;amp;环境配置&lt;/h1&gt;&lt;p&gt;建议熟悉Java编程语言（花几个小时</summary>
+    <summary type="html">&lt;h1 id=&quot;开始制作模组-环境配置&quot;&gt;&lt;a href=&quot;#开始制作模组-环境配置&quot; class=&quot;headerlink&quot; title=&quot;开始制作模组&amp;amp;环境配置&quot;&gt;&lt;/a&gt;开始制作模组&amp;amp;环境配置&lt;/h1&gt;&lt;p&gt;建议熟悉Java编程语言（花几个小时在网上学习了解一</summary>
       
     
     
     
-    <category term="Neoforge模组" scheme="https://neoforgetutorial.netlify.app/categories/Neoforge%E6%A8%A1%E7%BB%84/"/>
+    <category term="目录" scheme="http://neoforgetutorial.com/categories/%E7%9B%AE%E5%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Neoforge教学 首页</title>
+    <link href="http://neoforgetutorial.com/wiki/Neoforge%E6%95%99%E5%AD%A6-%E9%A6%96%E9%A1%B5.html"/>
+    <id>http://neoforgetutorial.com/wiki/Neoforge%E6%95%99%E5%AD%A6-%E9%A6%96%E9%A1%B5.html</id>
+    <published>2025-04-18T11:47:49.000Z</published>
+    <updated>2025-04-18T11:56:31.844Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我的世界Neoforge模组开发-最详细的教程（1-21-4）"><a href="#我的世界Neoforge模组开发-最详细的教程（1-21-4）" class="headerlink" title="我的世界Neoforge模组开发 最详细的教程（1.21.4）"></a>我的世界Neoforge模组开发 最详细的教程（1.21.4）</h1><p>这篇文章，将从0基础入门到精通，手把手教会你制作模组。</p><p>这段时间，Neoforge模组的最新教程较少，且Neoforge的更新较快，基本没有较新版本特别详细的教程（至少从我看到过的文章的情况来看），对初学者来说，这些教学入门难度较大。官方文档中的内容对初学者来说学习难度较大，只适合具有一定经验的开发者，缺乏渐进式学习路径设计。针对以上情况，本文将给出更加详细的教程。</p><p><a href="https://docs.neoforged.net/docs/gettingstarted/">官方文档链接</a></p><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>1.<a href="1.%E5%BC%80%E5%A7%8B%E5%88%B6%E4%BD%9C%E6%A8%A1%E7%BB%84&%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.md">开始制作模组&amp;环境配置</a></p><p>2.<a href="2.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%B9%E5%9D%97.md">创建第一个方块</a></p><p>教程还未完成，将陆续更新</p><p><img src="/assets/%E5%B0%81%E9%9D%A2.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;我的世界Neoforge模组开发-最详细的教程（1-21-4）&quot;&gt;&lt;a href=&quot;#我的世界Neoforge模组开发-最详细的教程（1-21-4）&quot; class=&quot;headerlink&quot; title=&quot;我的世界Neoforge模组开发 最详细的教程（1.21.4</summary>
+      
+    
+    
+    
+    <category term="目录" scheme="http://neoforgetutorial.com/categories/%E7%9B%AE%E5%BD%95/"/>
     
     
   </entry>
