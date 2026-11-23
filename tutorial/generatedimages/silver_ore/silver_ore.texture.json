@@ -1,0 +1,33 @@
+{
+  "width": 16,
+  "height": 16,
+  "pixels": [
+    "dccccbbcbabbbbdd",
+    "ccbaaccddceffecb",
+    "cbfgfbcabbcfgccc",
+    "cfghdcbaaabccbbb",
+    "bdddbaaffggfaabc",
+    "cdccfghhihgcbfgd",
+    "bccdddghhdcbcddc",
+    "bbcaabdddcbaaccc",
+    "ddafgaabcefgebcb",
+    "cdegghhdcdghdddc",
+    "acddhidabcddcbbb",
+    "ccccddcdcccefdcd",
+    "cbabfgdbefghhgfb",
+    "dfgbcdcbdghigddc",
+    "cdfebccccddddccc",
+    "ccddccbbccddcbcc"
+  ],
+  "palette": {
+    "a": [104, 104, 104, 255],
+    "b": [116, 116, 116, 255],
+    "c": [127, 127, 127, 255],
+    "d": [143, 143, 143, 255],
+    "e": [61, 73, 82, 255],
+    "f": [91, 108, 120, 255],
+    "g": [137, 156, 168, 255],
+    "h": [205, 219, 227, 255],
+    "i": [238, 246, 249, 255]
+  }
+}
