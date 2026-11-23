@@ -18,8 +18,14 @@ const isGitHubPagesRoot =
   githubProject &&
   `${githubOwner}.github.io`.toLowerCase() === githubProject.toLowerCase();
 
+const netlifySiteUrl =
+  process.env.NETLIFY === "true"
+    ? process.env.DEPLOY_PRIME_URL || process.env.URL
+    : "";
+
 const siteUrl =
   process.env.SITE_URL ||
+  netlifySiteUrl ||
   (githubOwner
     ? `https://${githubOwner}.github.io`
     : "https://docs.neoforged.net");
