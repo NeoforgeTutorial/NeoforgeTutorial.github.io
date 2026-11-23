@@ -1,27 +1,32 @@
-# NeoForge 26.1 文档网站
+# NeoForge 26.1 中文教程
 
-网站直接使用官方 NeoForged Documentation 的 Docusaurus 文档主题。
+面向模组开发新手的中文 NeoForge 26.1 教程。
 
-- 教程内容来自 `tutorial/`
-- 中文文档内容来自 `docs/`
-- 网页配置与主题位于项目根目录
+在线访问：<https://neoforgetutorial.github.io/>
 
-双击 `启动网站.cmd` 可启动本地预览。网站会直接读取上述两个目录中的 Markdown 文件，不需要同步或复制文章。
+## 内容目录
 
-## 部署到 GitHub Pages
+- `tutorial/`：教程正文。
+- `docs/`：中文参考文档。
+- `tutorial/generatedimages/`：示例贴图与像素源稿。
+- `official-docs/`：仅保存在本地，用于技术核对；不参与网站构建，也不上传至 GitHub。
 
-1. 在 GitHub 新建一个空仓库，不要同时创建 README、许可证或 `.gitignore`。
-2. 打开仓库的 `Settings` → `Pages`，将 `Build and deployment` 的 `Source` 设为 `GitHub Actions`。
-3. 在项目根目录初始化并推送仓库：
+## 本地预览
 
-   ```powershell
-   git init -b main
-   git add .
-   git commit -m "Add NeoForge documentation website"
-   git remote add origin https://github.com/<用户名>/<仓库名>.git
-   git push -u origin main
-   ```
+需要 Node.js 24。首次运行先安装依赖：
 
-推送后，`.github/workflows/deploy-pages.yml` 会自动构建并发布网站。普通仓库的地址为 `https://<用户名>.github.io/<仓库名>/`；若仓库名为 `<用户名>.github.io`，地址为 `https://<用户名>.github.io/`。
+```powershell
+npm ci
+```
 
-绑定自定义域名时，在仓库的 `Settings` → `Secrets and variables` → `Actions` → `Variables` 中添加 `SITE_URL`（例如 `https://docs.example.com`）和 `SITE_BASE_URL`（值为 `/`），然后在 `Settings` → `Pages` 中填写同一个域名。
+然后双击 `启动网站.cmd`，或执行：
+
+```powershell
+npm start
+```
+
+网站会读取 `tutorial/` 和 `docs/` 中的 Markdown 文件，修改文章后无需复制到其他目录。
+
+## 发布
+
+推送提交到 `main` 分支后，`.github/workflows/deploy-pages.yml` 会自动构建并发布网站。
