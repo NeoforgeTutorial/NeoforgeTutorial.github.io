@@ -216,14 +216,14 @@ runs {
 [datapackcmd]: https://minecraft.wiki/w/Commands/datapack
 [datapackprovider]: ../concepts/registries.md#data-generation-for-datapack-registries
 [enchantment]: server/enchantments/index.md
-[equipment]: ../items/armor.md#equipment-models
+[equipment]: ../items/armor.md#equipment-assets
 [equipmentasset]: ../items/armor.md#equipment-assets
 [event]: ../concepts/events.md
 [eventhandler]: ../concepts/events.md#registering-an-event-handler
 [function]: https://minecraft.wiki/w/Function_(Java_Edition)
 [glm]: server/loottables/glm.md
 [glmprovider]: server/loottables/glm.md#datagen
-[gmt]: ../../26.1/misc/gametest.md
+[gmt]: ../misc/gametest.md
 [itemmodifier]: https://minecraft.wiki/w/Item_modifier
 [langprovider]: client/i18n.md#datagen
 [lifecycle]: ../concepts/events.md#the-mod-lifecycle

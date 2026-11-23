@@ -175,7 +175,7 @@ public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerS
 
 调用某个 `new ItemStackTemplate(...)` 方法并传入 `Item` 及其他所需元素即可创建模板。需要物品堆时，可以通过 `ItemStackTemplate#create` 创建 `ItemStack`。
 
-### JSON 表示
+### JSON 表示 {#json-representation}
 
 许多场景（例如[配方][recipes]）需要把 `ItemStackTemplate` 表示为 JSON 对象。其表示如下：
 
@@ -258,22 +258,22 @@ public static final Supplier<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.r
 [block]: ../blocks/index.md
 [blockstates]: ../blocks/states.md
 [breaking]: ../blocks/index.md#breaking-a-block
-[citems]: ../../26.1/resources/client/models/items.md
+[citems]: ../resources/client/models/items.md
 [creativetabs]: #creative-tabs
 [datacomponents]: datacomponents.md
-[datagen]: ../../26.1/resources/index.md#data-generation
-[enchantment]: ../../26.1/resources/server/enchantments/index.md#enchantment-costs-and-levels
+[datagen]: ../resources/index.md#data-generation
+[enchantment]: ../resources/server/enchantments/index.md#enchantment-costs-and-levels
 [entity]: ../entities/index.md
 [food]: consumables.md#food
 [hunger]: https://minecraft.wiki/w/Hunger#Mechanics
 [interactions]: interactions.md
-[loottables]: ../../26.1/resources/server/loottables/index.md
+[loottables]: ../resources/server/loottables/index.md
 [modbus]: ../concepts/events.md#event-buses
-[recipes]: ../../26.1/resources/server/recipes/index.md
+[recipes]: ../resources/server/recipes/index.md
 [registering]: ../concepts/registries.md#methods-for-registering
 [sides]: ../concepts/sides.md
 [tools]: tools.md
-[datagen]: ../../26.1/resources/index.md#data-generation
-[i18n]: ../../26.1/resources/client/i18n.md
-[texture]: ../../26.1/resources/client/textures.md
-[tags]: ../../26.1/resources/server/tags.md
+[datagen]: ../resources/index.md#data-generation
+[i18n]: ../resources/client/i18n.md
+[texture]: ../resources/client/textures.md
+[tags]: ../resources/server/tags.md

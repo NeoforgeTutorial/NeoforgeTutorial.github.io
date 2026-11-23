@@ -250,11 +250,11 @@ new RightClickBlockRecipeBuilder(
 [codec]: ../../../datastorage/codecs.md
 [datagen]: #data-generation
 [event]: ../../../concepts/events.md
-[gui]: ../../../../26.1/rendering/screens.md
+[gui]: ../../../rendering/screens.md
 [ingredients]: ingredients.md
-[networking]: ../../../../26.1/networking/payload.md
+[networking]: ../../../networking/payload.md
 [recipedatagen]: index.md#data-generation
 [reloadlistener]: ../../reloadlisteners.md
 [registry]: ../../../concepts/registries.md#methods-for-registering
 [serializer]: #配方序列化器
-[streamcodec]: ../../../../26.1/networking/streamcodecs.md
+[streamcodec]: ../../../networking/streamcodecs.md

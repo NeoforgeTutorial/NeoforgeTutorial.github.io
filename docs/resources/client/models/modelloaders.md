@@ -61,7 +61,7 @@
 }
 ```
 
-### OBJ 模型
+### OBJ 模型 {#obj-model}
 
 OBJ 模型加载器允许在游戏中使用 Wavefront `.obj` 3D 模型，从而支持任意形状（包括三角形、圆形等）。`.obj` 模型必须放在 `models` 文件夹（或其子文件夹）中，并提供同名 `.mtl` 文件（或手动指定）。例如，位于 `models/block/example.obj` 的 OBJ 模型必须有对应 MTL 文件 `models/block/example.mtl`。
 

@@ -73,4 +73,4 @@ Gradle 成功加载后，你不仅会得到一个示例模组项目，工作区�
 [modgen]: https://neoforged.net/mod-generator/
 [ng]: https://github.com/neoforged/NeoGradle
 [properties]: modfiles.md#gradleproperties
-[resources]: ../../26.1/resources/index.md
+[resources]: ../resources/index.md

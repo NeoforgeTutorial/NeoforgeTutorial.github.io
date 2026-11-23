@@ -4,7 +4,7 @@
 
 本文介绍粒子类型和粒子描述的定义与使用。关于渲染的更多信息，请参阅配套的[客户端粒子][clientparticle]文章。
 
-## 注册 `ParticleType`
+## 注册 `ParticleType` {#registering-particletypes}
 
 粒子通过 `ParticleType` 注册。它们的工作方式与 `EntityType` 或 `BlockEntityType` 类似：有一个 `Particle` 类，每个生成的粒子都是该类实例；还有一个包含通用信息、用于注册的 `ParticleType` 类。`ParticleType` 属于[注册表]，因此要像其他注册对象一样使用 `DeferredRegister` 注册：
 
@@ -30,7 +30,7 @@ public class MyParticleTypes {
 只有在服务端处理粒子时才需要 `ParticleType`。客户端也可以直接使用 `Particle`。
 :::
 
-## 自定义 `ParticleType`
+## 自定义 `ParticleType` {#custom-particletypes}
 
 大多数情况下 `SimpleParticleType` 已经足够，但有时需要在服务端为粒子附加额外数据。此时需要自定义 `ParticleType` 和关联的自定义 `ParticleOptions`。先从实际保存信息的 `ParticleOptions` 开始：
 
@@ -206,13 +206,13 @@ public static void gatherData(GatherDataEvent.Client event) {
 - **客户端代码**：使用通用代码的方式；或者用所选粒子类创建 `new Particle()`，再调用 `Minecraft.getInstance().particleEngine#add(Particle)` 添加。注意，这样添加的粒子只会在当前客户端显示，其他玩家看不到。
 - **服务端代码**：调用 `ServerLevel#sendParticles`。原版 `/particle` 命令使用此方法。
 
-[clientparticle]: ../../../26.1/rendering/particles.md
+[clientparticle]: ../../rendering/particles.md
 [datagen]: ../index.md#data-generation
 [event]: ../../concepts/events.md
 [modbus]: ../../concepts/events.md#event-buses
 [options]: #custom-particletypes
-[particle]: ../../../26.1/rendering/particles.md
+[particle]: ../../rendering/particles.md
 [particletype]: #registering-particletypes
-[provider]: ../../../26.1/rendering/particles.md#particleprovider
+[provider]: ../../rendering/particles.md#particleprovider
 [reload]: ../reloadlisteners.md#reloading
 [side]: ../../concepts/sides.md

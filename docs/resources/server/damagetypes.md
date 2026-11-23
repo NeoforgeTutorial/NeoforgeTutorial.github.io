@@ -43,7 +43,7 @@ public static final ResourceKey<DamageType> EXAMPLE_DAMAGE =
 
 原版伤害类型也使用相同格式，资源包开发者可以按需修改这些值。
 
-## 创建和使用伤害来源
+## 创建和使用伤害来源 {#creating-and-using-damage-sources}
 
 `DamageSource` 通常在调用 [`Entity#hurt`][entityhurt] 时动态创建。注意，由于伤害类型属于[数据包注册表][dr]，查询它们需要 `RegistryAccess`，可通过 `Level#registryAccess` 获取。调用 `DamageSource` 构造方法最多可传入四个参数：
 
@@ -128,6 +128,6 @@ public static void onGatherData(GatherDataEvent.Client event) {
 [drdatagen]: ../../concepts/registries.md#data-generation-for-datapack-registries
 [entity]: ../../entities/index.md
 [entityhurt]: ../../entities/index.md#damaging-entities
-[extenum]: ../../../26.1/advanced/extensibleenums.md
-[rk]: ../../../26.1/misc/identifier.md#resourcekeys
+[extenum]: ../../advanced/extensibleenums.md
+[rk]: ../../misc/identifier.md#resourcekeys
 [tags]: tags.md

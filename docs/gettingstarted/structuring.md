@@ -76,5 +76,5 @@ Mojang 通常也为所有类采用类似结构，实体除外。实体类只使�
 
 [group]: modfiles.md#the-group-id
 [naming]: https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html
-[datagen]: ../../26.1/resources/index.md#data-generation
+[datagen]: ../resources/index.md#data-generation
 [sides]: ../concepts/sides.md

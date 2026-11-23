@@ -97,7 +97,7 @@ public class MyBlockEntityRenderState extends BlockEntityRenderState {
 [block]: ../blocks/index.md
 [blockentity]: index.md
 [event]: ../concepts/events.md#registering-an-event-handler
-[features]: ../../26.1/rendering/feature.md
+[features]: ../rendering/feature.md
 [item]: ../items/index.md
-[model]: ../../26.1/resources/client/models/index.md
-[special]: ../../26.1/resources/client/models/items.md#special-models
+[model]: ../resources/client/models/index.md
+[special]: ../resources/client/models/items.md#special-models

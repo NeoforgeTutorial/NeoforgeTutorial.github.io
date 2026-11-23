@@ -166,7 +166,7 @@ return InteractionResult.CONSUME.withoutItem();
 [effect]: mobeffects.md
 [entity]: ../entities/index.md
 [event]: ../concepts/events.md
-[featureflag]: ../../26.1/advanced/featureflags.md
+[featureflag]: ../advanced/featureflags.md
 [hitresult]: #hitresults
 [hurt]: ../entities/index.md#damaging-entities
 [itemstack]: index.md#itemstacks

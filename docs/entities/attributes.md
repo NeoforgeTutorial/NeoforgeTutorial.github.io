@@ -251,7 +251,7 @@ public static final Holder<Attribute> MY_ATTRIBUTE = ATTRIBUTES.register("my_att
 [equipment]: ../inventories/container.md#containers-on-entitys
 [event]: ../concepts/events.md
 [livingentity]: livingentity.md
-[loottables]: ../../26.1/resources/server/loottables/index.md
+[loottables]: ../resources/server/loottables/index.md
 [miningspeed]: ../blocks/index.md#mining-speed
 [mobeffect]: ../items/mobeffects.md
 [registry]: ../concepts/registries.md

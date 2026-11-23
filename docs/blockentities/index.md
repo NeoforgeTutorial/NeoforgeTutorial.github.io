@@ -278,7 +278,7 @@ public class MyBlockEntity extends BlockEntity {
 [dataattachments]: ../datastorage/attachments.md
 [entities]: ../entities/index.md
 [modbus]: ../concepts/events.md#event-buses
-[networking]: ../../26.1/networking/index.md
+[networking]: ../networking/index.md
 [registration]: ../concepts/registries.md#methods-for-registering
 [setblock]: ../blocks/states.md#levelsetblock
 [valueio]: ../datastorage/valueio.md

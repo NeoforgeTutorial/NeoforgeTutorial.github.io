@@ -16,7 +16,7 @@ Minecraft 声音引擎用不同术语表示不同概念：
 由于 Minecraft 音频库 OpenAL 的实现，如果声音需要具有衰减，即随玩家与声源距离变化而改变音量，声音文件必须是单声道。立体声（多声道）文件不会衰减，并且始终在玩家位置播放，适合环境音和背景音乐。另见 [MC-146721][bug]。
 :::
 
-## 创建 `SoundEvent`
+## 创建 `SoundEvent` {#creating-soundevents}
 
 `SoundEvent` 属于[注册对象][registration]，因此必须通过 `DeferredRegister` 注册到游戏，并且应为单例：
 

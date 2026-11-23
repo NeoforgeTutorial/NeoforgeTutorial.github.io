@@ -117,7 +117,7 @@ public void sendPairingData(ServerPlayer player, Consumer<CustomPacketPayload> p
 [attachment]: ../datastorage/attachments.md
 [custom]: #custom-network-messages
 [entitytype]: index.md#entitytype
-[networking]: ../../26.1/networking/index.md
+[networking]: ../networking/index.md
 [registration]: ../concepts/registries.md#methods-for-registering
-[streamcodec]: ../../26.1/networking/streamcodecs.md
+[streamcodec]: ../networking/streamcodecs.md
 [valueio]: ../datastorage/valueio.md

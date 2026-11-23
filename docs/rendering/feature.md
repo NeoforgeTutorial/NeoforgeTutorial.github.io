@@ -82,7 +82,7 @@ collector.order(1).submitParticleGroup(...);
 
 特性渲染完毕后，`SubmitNodeStorage` 会被清空，以供下次使用。特性渲染器可能在一帧内被多次调用，因为它不仅用于世界，也用于手持物品和[画中画 GUI 渲染器][gui]。在这些情况下，`renderAllFeatures` 之后会调用 `MultiBufferSource.BufferSource#endBatch` 构建网格，再把网格绘制到缓冲区。
 
-[blockentities]: ../blockentities/ber.md#blockentityrenderer
-[entities]: ../entities/renderer.md#entity-renderers
+[blockentities]: ../blockentities/ber.md
+[entities]: ../entities/renderer.md
 [gui]: screens.md#picture-in-picture
 [particles]: particles.md#particle-groups-and-render-states

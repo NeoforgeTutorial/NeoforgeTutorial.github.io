@@ -406,7 +406,7 @@ public class MyMob extends Mob implements MenuProvider {
 [qms]: #quickmovestack
 [cap]: capabilities.md#neoforge-provided-capabilities
 [container]: container.md
-[screen]: ../../26.1/rendering/screens.md
+[screen]: ../rendering/screens.md
 [icf]: #icontainerfactory
 [side]: ../concepts/sides.md#the-logical-side
 [interaction]: ../items/interactions.md#right-clicking-an-item

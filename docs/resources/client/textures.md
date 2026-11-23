@@ -88,4 +88,4 @@ Minecraft 原生支持方块和物品的动画纹理。动画纹理的各动画�
 }
 ```
 
-[identifiers]: ../../../26.1/misc/identifier.md
+[identifiers]: ../../misc/identifier.md

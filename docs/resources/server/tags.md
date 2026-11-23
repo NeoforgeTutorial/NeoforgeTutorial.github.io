@@ -193,5 +193,5 @@ public static void gatherData(GatherDataEvent.Client event) {
 [datacomponent]: ../../items/datacomponents.md
 [datagen]: ../index.md#data-generation
 [registry]: ../../concepts/registries.md
-[regkey]: ../../../26.1/misc/identifier.md#resourcekeys
-[identifier]: ../../../26.1/misc/identifier.md
+[regkey]: ../../misc/identifier.md#resourcekeys
+[identifier]: ../../misc/identifier.md

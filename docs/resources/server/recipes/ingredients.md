@@ -104,5 +104,5 @@ public static final Supplier<IngredientType<MinEnchantedIngredient>> MIN_ENCHANT
 [recipes]: index.md
 [registry]: ../../../concepts/registries.md
 [slotdisplay]: custom.md#slot-displays
-[streamcodec]: ../../../../26.1/networking/streamcodecs.md
+[streamcodec]: ../../../networking/streamcodecs.md
 [tag]: ../tags.md

@@ -83,5 +83,5 @@ public class ExampleModDedicatedServer {
 通常应确保模组能在客户端或服务端环境中工作。尤其对于仅客户端模组，你应验证它确实能在物理客户端运行，并在无法运行时不对事件做任何处理。
 :::
 
-[networking]: ../../26.1/networking/index.md
+[networking]: ../networking/index.md
 [mod]: ../gettingstarted/modfiles.md#javafml-and-mod

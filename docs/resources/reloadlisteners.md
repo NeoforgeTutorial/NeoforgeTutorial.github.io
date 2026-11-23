@@ -60,7 +60,7 @@ public CompletableFuture<Void> reload(
 }
 ```
 
-## 添加和获取监听器
+## 添加和获取监听器 {#adding-and-retrieving-reload-listeners}
 
 监听器都先创建类，再注册到对应端的事件，最后从对应端获取并操作。
 
@@ -92,7 +92,7 @@ public static void addClientReloadListeners(AddClientReloadListenersEvent event)
 
 随后直接访问 `MyClientReloadListener.INSTANCE`。
 
-### 服务端监听器
+### 服务端监听器 {#server-side-reload-listeners}
 
 服务端监听器分为两种：
 
@@ -149,7 +149,7 @@ MyRetainedReloadListener listener = serverLevel
         .getListener(MyRetainedReloadListener.LISTENER_KEY);
 ```
 
-## 监听器类层级
+## 监听器类层级 {#reload-listener-class-hierarchy}
 
 ```mermaid
 graph LR;
@@ -255,7 +255,7 @@ FileToIdConverter converter = FileToIdConverter.json("mymod/my_listener");
 
 在重载完成后运行一次，`#onResourceManagerReload()` 提供已填充的 `ResourceManager`，适合清理、缓存构建等后处理。
 
-## 共享重载状态
+## 共享重载状态 {#shared-reloading-state}
 
 监听器在不同线程运行。需要读取其他监听器结果时，应通过 `prepareSharedState()` 传递共享状态：
 
@@ -323,11 +323,11 @@ public class MyDependentReloadListener implements PreparableReloadListener {
 [datapackregistries]: ../concepts/registries.md#datapack-registries
 [events]: ../concepts/events.md
 [hierarchy]: #reload-listener-class-hierarchy
-[identifier]: ../../26.1/misc/identifier.md
+[identifier]: ../misc/identifier.md
 [multithreading]: #multi-threaded-reloading
 [preparablereloadlistener]: #preparablereloadlistener
 [recipes]: server/recipes/index.md
-[resourcekey]: ../../26.1/misc/identifier.md#resourcekeys
+[resourcekey]: ../misc/identifier.md#resourcekeys
 [resources]: index.md
 [serverlisteners]: #server-side-reload-listeners
 [sharedstate]: #shared-reloading-state

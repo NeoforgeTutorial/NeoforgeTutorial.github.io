@@ -334,18 +334,18 @@ public static void onGatherData(GatherDataEvent.Client event) {
 }
 ```
 
-[block]: ../../26.1/blocks/index.md
-[blockentity]: ../../26.1/blockentities/index.md
+[block]: ../blocks/index.md
+[blockentity]: ../blockentities/index.md
 [codec]: ../datastorage/codecs.md
 [datagen]: #data-generation-for-datapack-registries
-[datagenindex]: ../../26.1/resources/index.md#data-generation
-[datapack]: ../../26.1/resources/index.md#data
-[defregblocks]: ../../26.1/blocks/index.md#deferredregisterblocks-helpers
-[defregcomp]: ../../26.1/items/datacomponents.md#creating-custom-data-components
-[defregentity]: ../../26.1/entities/index.md#entitytype
-[defregitems]: ../../26.1/items/index.md#deferredregisteritems
+[datagenindex]: ../resources/index.md#data-generation
+[datapack]: ../resources/index.md#data
+[defregblocks]: ../blocks/index.md#deferredregisterblocks-helpers
+[defregcomp]: ../items/datacomponents.md#creating-custom-data-components
+[defregentity]: ../entities/index.md#entitytype
+[defregitems]: ../items/index.md#deferredregisteritems
 [event]: events.md
-[item]: ../../26.1/items/index.md
-[identifier]: ../../26.1/misc/identifier.md
-[resourcekey]: ../../26.1/misc/identifier.md#resourcekeys
+[item]: ../items/index.md
+[identifier]: ../misc/identifier.md
+[resourcekey]: ../misc/identifier.md#resourcekeys
 [singleton]: https://en.wikipedia.org/wiki/Singleton_pattern

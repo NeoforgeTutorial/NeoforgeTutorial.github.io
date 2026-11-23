@@ -202,5 +202,5 @@ public static void onClone(PlayerEvent.Clone event) {
 [datacomponents]: ../items/datacomponents.md
 [entity]: ../entities/index.md
 [saveddata]: saveddata.md
-[streamcodec]: ../../26.1/networking/streamcodecs.md
+[streamcodec]: ../networking/streamcodecs.md
 [valueio]: valueio.md#valueioserializable

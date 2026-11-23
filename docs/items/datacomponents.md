@@ -337,5 +337,5 @@ public class ExampleHolder implements MutableDataComponentHolder {
 [registered]: ../concepts/registries.md
 [codec]: ../datastorage/codecs.md
 [modbus]: ../concepts/events.md#event-buses
-[network]: ../../26.1/networking/payload.md
-[streamcodec]: ../../26.1/networking/streamcodecs.md
+[network]: ../networking/payload.md
+[streamcodec]: ../networking/streamcodecs.md

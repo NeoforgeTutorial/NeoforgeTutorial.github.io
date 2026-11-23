@@ -218,6 +218,6 @@ public static void gatherData(GatherDataEvent.Client event) {
 [animation]: client/textures.md#animated-textures
 [codec]: ../datastorage/codecs.md
 [events]: ../concepts/events.md
-[features]: ../../26.1/advanced/featureflags.md#feature-packs
+[features]: ../advanced/featureflags.md#feature-packs
 [pack]: index.md#packmcmeta
 [texture]: client/textures.md#texture-metadata

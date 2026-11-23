@@ -196,9 +196,9 @@ public static final TagKey<Block> INCORRECT_FOR_COPPER_TOOL = TagKey.create(Buil
 
 [block]: ../blocks/index.md
 [datacomponents]: datacomponents.md
-[enchantment]: ../../26.1/resources/server/enchantments/index.md#enchantment-costs-and-levels
+[enchantment]: ../resources/server/enchantments/index.md#enchantment-costs-and-levels
 [equippable]: armor.md#equippable
 [item]: index.md
 [itemability]: #itemabilitys
 [registering]: ../concepts/registries.md#methods-for-registering
-[tags]: ../../26.1/resources/server/tags.md
+[tags]: ../resources/server/tags.md

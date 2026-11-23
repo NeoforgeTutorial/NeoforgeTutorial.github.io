@@ -170,7 +170,7 @@ public static final DeferredItem<Item> EQUIPPABLE = ITEMS.registerSimpleItem(
 );
 ```
 
-## 装备资源
+## 装备资源 {#equipment-assets}
 
 现在盔甲已经存在于游戏中，但尝试穿戴时不会渲染，因为还没有指定装备的渲染方式。需要在 `Equippable#assetId` 指定的位置创建 `EquipmentClientInfo` JSON；其路径相对于[资源包][respack]的 `equipment` 文件夹（即 `assets` 文件夹）。`EquipmentClientInfo` 指定每一层渲染所使用的贴图。
 
@@ -432,10 +432,10 @@ this.equipmentLayerRenderer.renderLayers(
 
 [item]: index.md
 [datacomponents]: datacomponents.md
-[enchantment]: ../../26.1/resources/server/enchantments/index.md#enchantment-costs-and-levels
+[enchantment]: ../resources/server/enchantments/index.md#enchantment-costs-and-levels
 [livingentity]: ../entities/livingentity.md
 [registering]: ../concepts/registries.md#methods-for-registering
 [rendering]: #equipment-rendering
-[respack]: ../../26.1/resources/index.md#assets
-[tag]: ../../26.1/resources/server/tags.md
-[tinting]: ../../26.1/resources/client/models/index.md#tinting
+[respack]: ../resources/index.md#assets
+[tag]: ../resources/server/tags.md
+[tinting]: ../resources/client/models/index.md#tinting

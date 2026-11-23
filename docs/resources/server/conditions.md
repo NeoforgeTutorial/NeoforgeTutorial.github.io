@@ -235,9 +235,9 @@ public static final Supplier<MapCodec<XorCondition>> XOR =
 [datagen]: ../index.md#data-generation
 [datamapprovider]: datamaps/index.md#data-generation
 [datapackentries]: ../../concepts/registries.md#data-generation-for-datapack-registries
-[flags]: ../../../26.1/advanced/featureflags.md
+[flags]: ../../advanced/featureflags.md
 [glmprovider]: loottables/glm.md#datagen
 [loottable]: loottables/index.md
 [recipeprovider]: recipes/index.md#data-generation
-[register]: ../../../26.1/concepts/registries.md
+[register]: ../../concepts/registries.md
 [tag]: tags.md

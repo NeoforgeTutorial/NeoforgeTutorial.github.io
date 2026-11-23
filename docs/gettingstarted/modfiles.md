@@ -240,13 +240,13 @@ public class ExampleModClient {
 `neoforge.mods.toml` 中的条目不需要有对应的 `@Mod` 注解。同样，`neoforge.mods.toml` 中的一个条目也可以对应多个 `@Mod` 注解，例如你希望把通用逻辑和仅客户端逻辑分开时。
 :::
 
-[accesstransformer]: ../../26.1/advanced/accesstransformers.md#adding-ats
+[accesstransformer]: ../advanced/accesstransformers.md#adding-ats
 [array]: https://toml.io/en/v1.0.0#array-of-tables
 [atlasviewer]: https://github.com/XFactHD/AtlasViewer/blob/1.20.2/neoforge/src/main/resources/META-INF/services/xfacthd.atlasviewer.platform.services.IPlatformHelper
 [events]: ../concepts/events.md
 [features]: #features
 [group]: #the-group-id
-[i18n]: ../../26.1/resources/client/i18n.md#translating-mod-metadata
+[i18n]: ../resources/client/i18n.md#translating-mod-metadata
 [javafml]: #javafml-and-mod
 [jei]: https://www.curseforge.com/minecraft/mc-mods/jei
 [mcversioning]: versioning.md#minecraft
@@ -261,14 +261,14 @@ public class ExampleModClient {
 [neoversioning]: versioning.md#neoforge
 [packaging]: structuring.md#packaging
 [registration]: ../concepts/registries.md#deferredregister
-[resource]: ../../26.1/resources/index.md
+[resource]: ../resources/index.md
 [serviceload]: https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ServiceLoader.html#load(java.lang.Class)
 [sides]: ../concepts/sides.md
 [spdx]: https://spdx.org/licenses/
 [table]: https://toml.io/en/v1.0.0#table
 [toml]: https://toml.io/
-[update]: ../../26.1/misc/updatechecker.md
+[update]: ../misc/updatechecker.md
 [uses]: https://docs.oracle.com/javase/specs/jls/se21/html/jls-7.html#jls-7.7.3
 [versioning]: versioning.md
-[enumextension]: ../../26.1/advanced/extensibleenums.md
-[featureflags]: ../../26.1/advanced/featureflags.md
+[enumextension]: ../advanced/extensibleenums.md
+[featureflags]: ../advanced/featureflags.md

@@ -172,7 +172,7 @@ public static void mobDespawn(MobDespawnEvent event) {
 
 模组事件总线会作为参数传入模组构造方法，之后可以向它订阅模组总线事件。如果使用 `@EventBusSubscriber`，事件会自动订阅到正确的事件总线。
 
-### 模组生命周期
+### 模组生命周期 {#the-mod-lifecycle}
 
 大多数模组总线事件属于生命周期事件。生命周期事件会在启动期间每个模组的生命周期中运行一次。其中许多事件通过 `ParallelDispatchEvent` 子类并行触发；如果要从这类事件中在主线程运行代码，请使用 `#enqueueWork(Runnable runnable)` 把任务加入队列。
 

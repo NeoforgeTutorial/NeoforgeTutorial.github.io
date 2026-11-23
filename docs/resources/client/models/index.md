@@ -76,7 +76,7 @@ Minecraft 把 `from` 和 `to` 限制在 `[-16, 32]` 范围内。不过强烈不�
     - `axis`：旋转轴。目前无法绕多个轴旋转对象。
     - `origin`：可选。旋转原点，形式为 `[x, y, z]`。注意这些是绝对坐标，不相对于立方体位置；未指定时使用 `[0, 0, 0]`。
 
-#### 额外面数据
+#### 额外面数据 {#extra-face-data}
 
 额外面数据（`neoforge_data`）可应用于元素以及元素的单个面。在所有可用上下文中都是可选的。如果同时指定元素级和面级额外面数据，面级数据会覆盖元素级数据。额外数据可包含：
 
@@ -85,7 +85,7 @@ Minecraft 把 `from` 和 `to` 限制在 `[-16, 32]` 范围内。不过强烈不�
 - `sky_light`：覆盖该面使用的天空光值，默认 0。
 - `ambient_occlusion`：启用或禁用该面的环境光遮蔽，默认采用模型中设置的值。
 
-### 根变换
+### 根变换 {#root-transforms}
 
 在模型顶层添加 `transform` 属性，会告诉加载器：应在应用[方块状态文件][bsfile]中的旋转（方块模型）或 `display` 块中的变换（物品模型）之前，立即对所有几何体应用一次变换。该功能由 NeoForge 添加。
 
@@ -263,6 +263,6 @@ public static void registerAdditional(ModelEvent.RegisterStandalone event) {
 [perspectives]: modelsystem.md#perspectives
 [rendertype]: #render-types
 [roottransforms]: #root-transforms
-[rl]: ../../../../26.1/misc/identifier.md
+[rl]: ../../../misc/identifier.md
 [textures]: ../textures.md
 [tinting]: #tinting

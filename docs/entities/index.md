@@ -411,13 +411,13 @@ _<span class="mermaid-desc-yellow">黄色</span>类为 `abstract`，<span class=
 
 [block]: ../blocks/index.md
 [damageevents]: livingentity.md#damage-events
-[damagesource]: ../../26.1/resources/server/damagetypes.md#creating-and-using-damage-sources
+[damagesource]: ../resources/server/damagetypes.md#creating-and-using-damage-sources
 [damaging]: #damaging-entities
 [data]: data.md
 [dataattachments]: ../datastorage/attachments.md
 [entity]: #the-entity-class
 [event]: ../concepts/events.md
-[extenum]: ../../26.1/advanced/extensibleenums.md
+[extenum]: ../advanced/extensibleenums.md
 [hierarchy]: #entity-class-hierarchy
 [hitresult]: ../items/interactions.md#hitresults
 [item]: ../items/index.md
@@ -427,7 +427,7 @@ _<span class="mermaid-desc-yellow">黄色</span>类为 `abstract`，<span class=
 [middleclick]: ../items/interactions.md#middle-clicking
 [mobeffect]: ../items/mobeffects.md
 [mobspawn]: livingentity.md#spawning
-[particle]: ../../26.1/resources/client/particles.md
+[particle]: ../resources/client/particles.md
 [projectile]: #projectiles
 [registration]: ../concepts/registries.md#methods-for-registering
 [renderer]: renderer.md

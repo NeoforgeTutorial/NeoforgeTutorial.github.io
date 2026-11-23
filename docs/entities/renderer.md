@@ -627,9 +627,9 @@ public static void registerJsonAnimationTypes(RegisterJsonAnimationTypesEvent ev
 [blockbench]: https://www.blockbench.net/
 [catmullrom]: https://en.wikipedia.org/wiki/Cubic_Hermite_spline#Catmull–Rom_spline
 [events]: ../concepts/events.md
-[features]: ../../26.1/rendering/feature.md
+[features]: ../rendering/feature.md
 [geckolib]: https://github.com/bernie-g/geckolib
 [livingentity]: livingentity.md
 [renderlayer]: #creating-a-render-layer-and-baking-a-layer-definition
-[rl]: ../../26.1/misc/identifier.md
+[rl]: ../misc/identifier.md
 [sides]: ../concepts/sides.md

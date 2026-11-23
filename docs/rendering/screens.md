@@ -737,5 +737,5 @@ public static void registerScreens(RegisterMenuScreensEvent event) {
 [screen]: #the-screen-subtype
 [argb]: https://en.wikipedia.org/wiki/RGBA_color_model#ARGB32
 [component]: ../resources/client/i18n.md#components
-[keymapping]: ../../26.1/misc/keymappings.md#inside-a-gui
+[keymapping]: ../misc/keymappings.md#inside-a-gui
 [modbus]: ../concepts/events.md#event-buses

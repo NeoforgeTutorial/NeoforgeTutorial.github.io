@@ -63,7 +63,7 @@ import TabItem from '@theme/TabItem';
 }
 ```
 
-### 成本与等级
+### 成本与等级 {#enchantment-costs-and-levels}
 
 附魔台先计算周围方块提供的附魔能力，再调用 `EnchantmentHelper#getEnchantmentCost` 得到基础等级。物品可附魔性 `e` 会随机调整等级：
 

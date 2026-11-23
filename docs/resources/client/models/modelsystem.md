@@ -12,7 +12,7 @@ Minecraft 中的模型就是带有纹理的四边形列表。模型处理流程�
 
 在烘焙期间，每个 `UnbakedModel` 都会包装进 `ResolvedModel`，由物品或方块状态的 `ModelBaker` 取得。顾名思义，`ResolvedModel` 是解析完所有悬挂引用的 `UnbakedModel`。之后可通过 `getTop*` 系列方法取得关联数据，这些方法会从当前模型及其父模型计算属性和几何体。通常在这里调用 `ResolvedModel#bakeTopGeometry`，把 `ResolvedModel` 烘焙为 `QuadCollection`。
 
-## 方块状态定义
+## 方块状态定义 {#block-state-definitions}
 
 方块状态定义 JSON（位于 `assets/<namespace>/blockstates`）会被编译并烘焙为每个 `BlockState` 对应的 `BlockStateModel`。`BlockStateModel` 的创建过程如下：
 
@@ -37,7 +37,7 @@ Minecraft 中的模型就是带有纹理的四边形列表。模型处理流程�
 
 有时，`BlockStateModel` 需要依赖 `BlockEntity` 来决定在 `collectParts` 中选择哪些 `BlockStateModelPart`。NeoForge 提供 `ModelData` 系统，用于同步并传递来自 `BlockEntity` 的数据。为此，`BlockEntity` 必须实现 `getModelData` 并返回要同步的数据。之后可以调用 `BlockEntity#requestModelDataUpdate` 把数据发送给客户端。然后在 `collectParts` 中，可用 `BlockPos` 对 `BlockAndTintGetter` 调用 `getModelData` 取得数据。
 
-## 物品模型
+## 物品模型 {#item-models}
 
 [客户端物品][clientitem] JSON（位于 `assets/<namespace>/items`）会被编译并烘焙成某个 `Item` 的 `ItemModel`，供 `ItemStack` 使用。`ItemModel` 的创建过程如下：
 
@@ -135,12 +135,12 @@ public static void modifyBakingResult(ModelEvent.ModifyBakingResult event) {
 [bsd]: #block-state-definitions
 [clientitem]: items.md
 [event]: ../../../concepts/events.md
-[extended]: ../../../../26.1/advanced/extensibleenums.md#creating-an-enum-entry
+[extended]: ../../../advanced/extensibleenums.md#creating-an-enum-entry
 [itemmodels]: items.md#manually-rendering-an-item
 [itemmodelsection]: #item-models
 [livingentity]: ../../../entities/livingentity.md
 [modbus]: ../../../concepts/events.md#event-buses
 [modelloader]: modelloaders.md
-[rl]: ../../../../26.1/misc/identifier.md
+[rl]: ../../../misc/identifier.md
 [perspective]: #perspectives
 [sides]: ../../../concepts/sides.md

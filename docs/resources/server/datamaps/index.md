@@ -146,7 +146,7 @@ public static void itemPickup(ItemEntityPickupEvent.Post event) {
 
 `AdvancedDataMapType` 支持自定义合并器和移除器，适合值为 `List`、`Map` 等集合的数据映射。除 `R`（注册表类型）和 `T`（值类型）外，它还有 `VR extends DataMapValueRemover<R, T>` 泛型。使用 `AdvancedDataMapType#builder()` 创建，并通过 `#merger`、`#remover` 设置。
 
-### 合并器
+### 合并器 {#mergers}
 
 默认合并器用新值覆盖旧值。自定义合并器接收冲突的两个值、其来源和目标注册表，返回最终值：
 
@@ -167,7 +167,7 @@ AdvancedDataMapType<Item, Integer> ADVANCED_MAP = AdvancedDataMapType.builder(..
 
 若任一条目指定 `"replace": true`，则使用对应值；都指定时使用较高优先级数据包的值。
 
-### 移除器
+### 移除器 {#removers}
 
 默认移除器删除对象的全部映射值。自定义移除器接收当前值和来源，返回替换值，返回空 `Optional` 表示完全删除：
 

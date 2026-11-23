@@ -733,7 +733,7 @@ public static void registerConditionalProperties(RegisterConditionalItemModelPro
 
 JSON 中把 `property` 设为 `examplemod:bar_visible`，并在 `on_true` 和 `on_false` 中分别提供模型即可。
 
-## 特殊模型
+## 特殊模型 {#special-models}
 
 并非所有模型都能用基础模型 JSON 表示。有些模型具有动态组件，或复用为[`BlockEntityRenderer`][ber]创建的现有 `Model`。此时可使用特殊模型类型指定提交渲染的[特性][features]。这些对象称为 `SpecialModelRenderer`，定义在 `SpecialModelRenderers` 中。
 
@@ -1044,9 +1044,9 @@ protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerat
 [ber]: ../../../blockentities/ber.md
 [capability]: ../../../inventories/capabilities.md#registering-capabilities
 [composite]: modelloaders.md#composite-model
-[features]: ../../../../26.1/rendering/feature.md
+[features]: ../../../rendering/feature.md
 [itemmodel]: #manually-rendering-an-item
 [modbus]: ../../../concepts/events.md#event-buses
 [models]: modelsystem.md
-[rl]: ../../../../26.1/misc/identifier.md
-[screens]: ../../../../26.1/rendering/screens.md#items
+[rl]: ../../../misc/identifier.md
+[screens]: ../../../rendering/screens.md#items

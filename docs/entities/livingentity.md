@@ -299,27 +299,27 @@ _另见[实体/`MobCategory`][mobcategory]、[世界生成/生物群系修改器
 
 所有检查通过后，根据权重从列表选择生成条目。假设选中猪，游戏会检查区块中的随机位置是否适合生成，适合时按生成数据的最小和最大数量生成（此例正好生成 4 头猪）。如果不适合，再尝试两个不同位置；仍找不到就取消生成。
 
-[addspawncosts]: ../../26.1/worldgen/biomemodifier.md#add-spawn-costs
-[addspawns]: ../../26.1/worldgen/biomemodifier.md#add-spawns
+[addspawncosts]: ../worldgen/biomemodifier.md#add-spawn-costs
+[addspawns]: ../worldgen/biomemodifier.md#add-spawns
 [attributes]: attributes.md
-[clientitem]: ../../26.1/resources/client/models/items.md
+[clientitem]: ../resources/client/models/items.md
 [containers]: ../inventories/container.md
 [creative]: ../items/index.md#creative-tabs
 [damage]: index.md#damaging-entities
-[damagesources]: ../../26.1/resources/server/damagetypes.md#creating-and-using-damage-sources
-[damagetypes]: ../../26.1/resources/server/damagetypes.md
+[damagesources]: ../resources/server/damagetypes.md#creating-and-using-damage-sources
+[damagetypes]: ../resources/server/damagetypes.md
 [datacomponent]: ../items/datacomponents.md
-[enchantments]: ../../26.1/resources/server/enchantments/index.md
+[enchantments]: ../resources/server/enchantments/index.md
 [entities]: index.md
 [hurt]: index.md#damaging-entities
 [logicalsides]: ../concepts/sides.md#the-logical-side
 [mcwiki]: https://minecraft.wiki
 [mobcategory]: index.md#mobcategory
 [mobeffects]: ../items/mobeffects.md
-[model]: ../../26.1/resources/client/models/index.md
+[model]: ../resources/client/models/index.md
 [priority]: ../concepts/events.md#priority
 [register]: ../concepts/registries.md
 [spawncycle]: https://minecraft.wiki/w/Mob_spawning#Spawn_cycle
 [spawning]: index.md#spawning-entities
-[tags]: ../../26.1/resources/server/tags.md
-[translation]: ../../26.1/resources/client/i18n.md
+[tags]: ../resources/server/tags.md
+[translation]: ../resources/client/i18n.md

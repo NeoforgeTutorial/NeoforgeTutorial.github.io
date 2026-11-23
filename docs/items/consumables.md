@@ -357,14 +357,14 @@ public static final DeferredItem<Item> FOOD = ITEMS.registerSimpleItem(
 [consumeeffect]: #consumeeffect
 [datacomponent]: datacomponents.md
 [datacompreg]: datacomponents.md#creating-custom-data-components
-[extensibleenum]: ../../26.1/advanced/extensibleenums.md
+[extensibleenum]: ../advanced/extensibleenums.md
 [food]: #food
 [hunger]: https://minecraft.wiki/w/Hunger#Mechanics
 [item]: index.md
 [livingentity]: ../entities/livingentity.md
 [modbus]: ../concepts/events.md#event-buses
 [mobeffectinstance]: mobeffects.md#mobeffectinstances
-[particles]: ../../26.1/resources/client/particles.md
+[particles]: ../resources/client/particles.md
 [potions]: mobeffects.md#potions
-[sound]: ../../26.1/resources/client/sounds.md#creating-soundevents
+[sound]: ../resources/client/sounds.md#creating-soundevents
 [registering]: ../concepts/registries.md#methods-for-registering
