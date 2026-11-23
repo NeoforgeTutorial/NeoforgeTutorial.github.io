@@ -32,7 +32,7 @@ const siteBaseUrl = normalizeBaseUrl(
 const config = {
   title: "NeoForge 26.1",
   tagline: "NeoForge 模组开发资料",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.png",
 
   url: siteUrl,
   baseUrl: siteBaseUrl,

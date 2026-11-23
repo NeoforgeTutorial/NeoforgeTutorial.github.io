@@ -17,7 +17,8 @@
 
 ## 图片与像素源稿
 
-- 所有生成的图片统一放在 `tutorial/generatedimages/` 下；每个任务的图片和对应像素源稿放在该目录内的同一子文件夹中，例如 `tutorial/generatedimages/<名称>/`。教学工程中的资源副本由该源稿生成。
+- 所有生成的图片统一放在教学模组工程的 `D:\folder\tutorialmod-template-26.1\generatedimages\` 下；每个任务的图片和对应像素源稿放在该目录内的同一子文件夹中，例如 `D:\folder\tutorialmod-template-26.1\generatedimages\<名称>\`。
+- 教学模组实际使用的贴图放在 `src\main\resources\assets\tutorialmod\textures\` 下，并由对应的源稿生成。
 - 教程正文不展示或引用生成的示例贴图、示例材质及像素源稿；只说明读者需要准备的文件路径、尺寸和格式。素材与源稿是否放入正文由用户明确决定。
 
 ## 教程写作规范
