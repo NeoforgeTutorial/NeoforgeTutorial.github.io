@@ -33,11 +33,12 @@ const siteBaseUrl = normalizeBaseUrl(
   process.env.SITE_BASE_URL ||
     (githubProject && !isGitHubPagesRoot ? `/${githubProject}/` : "/"),
 );
+const siteName = "Neoforge 26.1 模组开发教程";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "NeoForge 26.1",
-  tagline: "NeoForge 模组开发资料",
+  title: siteName,
+  tagline: siteName,
   favicon: "img/favicon.png",
 
   url: siteUrl,
@@ -54,6 +55,20 @@ const config = {
     defaultLocale: "zh-Hans",
     locales: ["zh-Hans"],
   },
+
+  headTags: [
+    {
+      tagName: "script",
+      attributes: {type: "application/ld+json"},
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: siteName,
+        inLanguage: "zh-CN",
+        url: new URL(siteBaseUrl, siteUrl).href,
+      }),
+    },
+  ],
 
   presets: [
     [
@@ -90,11 +105,25 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          name: "description",
+          content: "面向新手的 Neoforge 26.1 中文模组开发教程。",
+        },
+        {
+          name: "application-name",
+          content: siteName,
+        },
+        {
+          property: "og:site_name",
+          content: siteName,
+        },
+      ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "NeoForge 26.1",
+        title: siteName,
         items: [
           {
             type: "docSidebar",
