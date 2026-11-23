@@ -20,7 +20,7 @@ const isGitHubPagesRoot =
 
 const netlifySiteUrl =
   process.env.NETLIFY === "true"
-    ? process.env.DEPLOY_PRIME_URL || process.env.URL
+    ? process.env.URL || process.env.DEPLOY_PRIME_URL
     : "";
 
 const siteUrl =
