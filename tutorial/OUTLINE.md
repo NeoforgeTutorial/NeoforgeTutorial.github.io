@@ -4,7 +4,7 @@
 
 示例优先在同一主题内延续，方便后续篇章在已有代码上继续制作。
 
-第 1 至 5 篇已经完成；第 6 篇工具、盔甲与消耗品是下一篇的起点。后续篇章可以按实际篇幅合并或拆分，但保持这里的内容依赖顺序。
+第 1 至 6 篇已经完成；第 7 篇事件、交互与游戏刻是下一篇的起点。后续篇章可以按实际篇幅合并或拆分，但保持这里的内容依赖顺序。
 
 ## 第 1 篇：环境配置（已完成）
 
@@ -57,6 +57,7 @@
 ## 第 5 篇：数据生成基础（已完成）
 
 - 理解 Data 运行配置、`GatherDataEvent` 和数据提供器之间的关系。
+- 使用语言提供器生成中英文名称文件。
 - 使用配方提供器生成配方及配方书解锁进度。
 - 使用方块战利品表提供器生成掉落 JSON。
 - 知道标签和模型也可以改用提供器生成。
@@ -66,18 +67,17 @@
 
 对应官方文档：`resources/index.md`、`resources/server/recipes/index.md`、`resources/server/loottables/index.md`、`resources/server/tags.md`、`resources/client/models/datagen.md`
 
-## 第 6 篇：工具、盔甲与消耗品
+## 第 6 篇：工具、盔甲与消耗品（已完成）
 
 - 区分 `Item` 定义与每个 `ItemStack` 携带的数据，认识数据组件。
 - 使用工具材料定义挖掘能力、攻击属性和耐久。
-- 为示例银镐补上工作台有序配方，并沿用第 5 篇的数据生成方式。
 - 注册盔甲并配置穿戴、防护和物品模型。
 - 使用消耗品组件定义食物、药水效果和食用时间。
-- 用标签和数据映射把自定义内容接入原版规则。
+- 用物品和方块标签把工具、盔甲与修理材料接入原版分类和等级规则。
 
-示例：以 `silver_ingot` 为共同材料，分别制作示例工具 `silver_sword`、示例盔甲 `silver_helmet` 和示例消耗品 `silver_apple`。
+示例：以 `silver_ingot` 为材料，分别制作示例工具 `silver_pickaxe`、示例盔甲 `silver_helmet`，并把 `silver_ingot` 自身设为可食用的示例消耗品。
 
-对应官方文档：`items/datacomponents.md`、`items/tools.md`、`items/armor.md`、`items/consumables.md`、`resources/server/tags.md`、`resources/server/datamaps/index.md`
+对应官方文档：`items/datacomponents.md`、`items/tools.md`、`items/armor.md`、`items/consumables.md`、`resources/server/tags.md`、`resources/client/models/items.md`
 
 ## 第 7 篇：事件、交互与游戏刻
 
