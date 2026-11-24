@@ -4,3 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "24"
+
+[[redirects]]
+  from = "/"
+  to = "/tutorial/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
+  status = 301
+  force = true

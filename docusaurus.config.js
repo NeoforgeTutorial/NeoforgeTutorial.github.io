@@ -108,7 +108,8 @@ const config = {
       metadata: [
         {
           name: "description",
-          content: "面向新手的 Neoforge 26.1 中文模组开发教程。",
+          content:
+            "面向零基础开发者的 Neoforge 26.1 中文模组开发教程，涵盖开发环境配置、物品与方块注册、资源与模型、数据生成、事件系统和常用 API，提供循序渐进的实践步骤与中文参考资料。",
         },
         {
           name: "application-name",
