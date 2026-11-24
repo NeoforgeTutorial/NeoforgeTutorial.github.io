@@ -1,4 +1,4 @@
-# NeoForge 26.1 中文教程
+# NeoForge 26.1 教程
 
 面向模组开发新手的中文 NeoForge 26.1 教程。
 
@@ -17,5 +17,3 @@ npm ci
 ```powershell
 npm start
 ```
-
-网站会读取 `tutorial/` 和 `docs/` 中的 Markdown 文件，修改文章后无需复制到其他目录。

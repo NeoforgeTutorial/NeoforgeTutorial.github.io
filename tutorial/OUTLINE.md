@@ -2,11 +2,9 @@
 
 本大纲尚未最终确定，章节顺序和覆盖范围会随实际写作情况调整。写作时不需完全依照，仅供参考。
 
-整体按“先做出一个可运行结果，再解释支撑它的一小组机制”的顺序编排。注册、事件、资源、数据包和双端概念不单独设置前置篇，而是在第一次真正需要时讲清。示例优先在同一主题内延续，方便后续篇章在已有代码上继续制作。
+示例优先在同一主题内延续，方便后续篇章在已有代码上继续制作。
 
-第 1 至 3 篇已经完成；第 4 篇以配方、战利品表和数据生成为下一篇的起点。后续篇章可以按实际篇幅合并或拆分，但保持这里的内容依赖顺序。
-
-主线不包含完整 Java 语言课程、独立 Java 桥接篇、多加载器兼容开发、大型整合包开发，以及高级着色器、渲染管线和模型加载器源码分析。
+第 1 至 5 篇已经完成；第 6 篇工具、盔甲与消耗品是下一篇的起点。后续篇章可以按实际篇幅合并或拆分，但保持这里的内容依赖顺序。
 
 ## 第 1 篇：环境配置（已完成）
 
@@ -39,29 +37,40 @@
 - 设置硬度、爆炸抗性、声音和发光等最常用方块属性。
 - 把方块物品加入创造模式标签页。
 - 补齐方块状态文件、方块模型、物品模型、贴图和名称。
-- 用最简战利品表和工具标签让方块能够被正常挖掘并掉落。
-- 得到第一个可放置、可挖掘、可收集的示例方块。
+- 用工具标签设置方块所需的工具类型和等级。
+- 得到第一个可放置、可挖掘的示例方块。
 
 示例：示例方块 `silver_ore`，沿用银主题。
 
-对应官方文档：`blocks/index.md`、`blocks/states.md`、`resources/client/models/index.md`、`resources/server/loottables/index.md`、`resources/server/tags.md`
+对应官方文档：`blocks/index.md`、`blocks/states.md`、`resources/client/models/index.md`、`resources/server/tags.md`
 
-## 第 4 篇：配方、战利品表与数据生成（下一篇）
+## 第 4 篇：配方与战利品表（已完成）
 
 - 区分 `assets` 中的客户端资源与 `data` 中的服务器数据。
 - 用配方定义物品如何获得，用战利品表定义方块和实体掉落什么。
 - 用标签统一描述可开采方块、可合成材料或同类内容。
-- 使用数据生成器生成模型、配方、战利品表和标签，减少重复 JSON。
-- 理解资源重载、数据重载和服务器数据同步的适用范围。
 
-示例：继续使用 `silver_ore` 和 `silver_ingot`，用数据生成器补上银矿石的掉落、挖矿标签和银锭相关配方。
+示例：继续使用 `silver_ore` 和 `silver_ingot`，银锭相关配方。
+
+对应官方文档：`resources/index.md`、`resources/server/recipes/index.md`、`resources/server/loottables/index.md`、`resources/server/tags.md`
+
+## 第 5 篇：数据生成基础（已完成）
+
+- 理解 Data 运行配置、`GatherDataEvent` 和数据提供器之间的关系。
+- 使用配方提供器生成配方及配方书解锁进度。
+- 使用方块战利品表提供器生成掉落 JSON。
+- 知道标签和模型也可以改用提供器生成。
+- 区分重新运行数据生成、数据重载和客户端资源重载。
+
+示例：继续使用 `silver_ore` 和 `silver_ingot`，用数据生成器写出银锭熔炼配方和银矿石掉落。
 
 对应官方文档：`resources/index.md`、`resources/server/recipes/index.md`、`resources/server/loottables/index.md`、`resources/server/tags.md`、`resources/client/models/datagen.md`
 
-## 第 5 篇：工具、盔甲与消耗品
+## 第 6 篇：工具、盔甲与消耗品
 
 - 区分 `Item` 定义与每个 `ItemStack` 携带的数据，认识数据组件。
 - 使用工具材料定义挖掘能力、攻击属性和耐久。
+- 为示例银镐补上工作台有序配方，并沿用第 5 篇的数据生成方式。
 - 注册盔甲并配置穿戴、防护和物品模型。
 - 使用消耗品组件定义食物、药水效果和食用时间。
 - 用标签和数据映射把自定义内容接入原版规则。
@@ -70,7 +79,7 @@
 
 对应官方文档：`items/datacomponents.md`、`items/tools.md`、`items/armor.md`、`items/consumables.md`、`resources/server/tags.md`、`resources/server/datamaps/index.md`
 
-## 第 6 篇：事件、交互与游戏刻
+## 第 7 篇：事件、交互与游戏刻
 
 - 区分模组事件总线、游戏事件总线和物理客户端/服务端。
 - 区分直接覆盖方块或物品方法与监听交互事件的适用场景。
@@ -82,7 +91,7 @@
 
 对应官方文档：`concepts/events.md`、`concepts/sides.md`、`items/interactions.md`、`blocks/index.md`
 
-## 第 7 篇：实体与实体渲染
+## 第 8 篇：实体与实体渲染
 
 - 区分实体类型、实体实例和实体渲染器。
 - 注册普通实体，并处理保存、加载和客户端同步。
@@ -90,11 +99,11 @@
 - 接入实体渲染器和模型、贴图资源。
 - 根据需求选择实体数据同步、网络消息或两者组合。
 
-示例：制作投射物实体 `silver_orb`，并让第 6 篇的 `silver_scepter` 改为召唤它。
+示例：制作投射物实体 `silver_orb`，并让第 7 篇的 `silver_scepter` 改为召唤它。
 
 对应官方文档：`entities/index.md`、`entities/data.md`、`entities/attributes.md`、`entities/livingentity.md`、`entities/renderer.md`
 
-## 第 8 篇：方块状态与方块行为
+## 第 9 篇：方块状态与方块行为
 
 - 有限状态为什么适合放在方块状态中，无限状态为什么需要方块实体。
 - 声明方向、布尔值和整数等方块状态属性。
@@ -106,7 +115,7 @@
 
 对应官方文档：`blocks/index.md`、`blocks/states.md`、`concepts/events.md`
 
-## 第 9 篇：方块实体与持久数据
+## 第 10 篇：方块实体与持久数据
 
 - 判断何时应当从方块状态升级为方块实体。
 - 创建方块实体类型，并让方块正确创建、获取和移除对应实例。
@@ -118,7 +127,7 @@
 
 对应官方文档：`blockentities/index.md`、`datastorage/codecs.md`、`datastorage/valueio.md`、`datastorage/saveddata.md`、`datastorage/attachments.md`
 
-## 第 10 篇：物品处理能力、容器、菜单与界面
+## 第 11 篇：物品处理能力、容器、菜单与界面
 
 - 用物品处理能力让方块实体接收和提供物品。
 - 区分容器、菜单和屏幕各自由哪一端负责。
@@ -126,11 +135,11 @@
 - 同步菜单数据，并在客户端绘制对应界面。
 - 理解服务端权威和物品交易校验，避免两端状态不一致。
 
-示例：继续扩展第 9 篇的 `silver_crate`，加入物品槽、菜单和可打开的界面。
+示例：继续扩展第 10 篇的 `silver_crate`，加入物品槽、菜单和可打开的界面。
 
 对应官方文档：`inventories/capabilities.md`、`inventories/container.md`、`inventories/menus.md`、`inventories/transactions.md`、`rendering/screens.md`
 
-## 第 11 篇：网络通信与双端同步
+## 第 12 篇：网络通信与双端同步
 
 - 判断什么时候需要自定义网络消息，什么时候已有同步机制已经足够。
 - 注册 Payload，并使用 Stream Codec 描述消息内容。
@@ -142,7 +151,7 @@
 
 对应官方文档：`networking/index.md`、`networking/payload.md`、`networking/streamcodecs.md`、`concepts/sides.md`
 
-## 第 12 篇：特征、生物群系修改与结构生成
+## 第 13 篇：特征、生物群系修改与结构生成
 
 - 区分世界生成特征、放置规则和生物群系修改器。
 - 让矿石、植被或小型地貌按条件和概率生成。
@@ -154,7 +163,7 @@
 
 对应官方文档：`worldgen/biomemodifier.md`；其余内容以 26.1 原版世界生成 JSON 和教学工程为准。
 
-## 第 13 篇：流体
+## 第 14 篇：流体
 
 - 区分流体类型、流体状态和承载流体的方块。
 - 注册静止与流动状态，并处理流动方向和高度。
@@ -166,7 +175,7 @@
 
 对应官方文档：`fluids/index.md`、`fluids/inworld.md`、`fluids/recipes.md`
 
-## 第 14 篇：配置、命令与调试
+## 第 15 篇：配置、命令与调试
 
 - 选择公共配置、客户端配置或服务端配置。
 - 注册命令，并区分权限、参数解析和服务端执行。
@@ -177,7 +186,7 @@
 
 对应官方文档：`misc/config.md`、`misc/commands.md`、`misc/debugprofiler.md`、`concepts/sides.md`
 
-## 第 15 篇：测试、打包与发布
+## 第 16 篇：测试、打包与发布
 
 - 使用 Game Test 验证稳定的服务端行为，并保留必要的客户端手动测试。
 - 检查模组元数据、依赖版本和加载条件。
