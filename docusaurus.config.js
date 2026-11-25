@@ -43,6 +43,7 @@ const config = {
 
   url: siteUrl,
   baseUrl: siteBaseUrl,
+  trailingSlash: true,
 
   organizationName: githubOwner || "neoforged",
   projectName: githubProject || "documentation",
