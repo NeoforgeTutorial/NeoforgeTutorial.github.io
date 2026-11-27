@@ -39,7 +39,7 @@ const siteName = "Neoforge 26.1 模组开发教程";
 const config = {
   title: siteName,
   tagline: siteName,
-  favicon: "img/favicon.png",
+  favicon: "img/favicon-48.png",
 
   url: siteUrl,
   baseUrl: siteBaseUrl,
